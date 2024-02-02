@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/GFG-JAVA.iml" filepath="$PROJECT_DIR$/.idea/GFG-JAVA.iml" />
       <module fileurl="file://$PROJECT_DIR$/MultiThreading/MultiThreading.iml" filepath="$PROJECT_DIR$/MultiThreading/MultiThreading.iml" />
       <module fileurl="file://$PROJECT_DIR$/ProducerConsumer/ProducerConsumer.iml" filepath="$PROJECT_DIR$/ProducerConsumer/ProducerConsumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/firstJDBC/firstJDBC.iml" filepath="$PROJECT_DIR$/firstJDBC/firstJDBC.iml" />
     </modules>
   </component>
 </project>
