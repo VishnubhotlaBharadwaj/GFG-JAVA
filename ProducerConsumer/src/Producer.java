@@ -8,12 +8,11 @@ public class Producer extends Thread{
     public void run() {
         int i =1;
         while(true) {
-            bufferSpace.produce_item(i);
-            i++;
             try {
+                bufferSpace.produce_item(i);
+                i++;
                 Thread.sleep(1000);
-            }
-           catch (InterruptedException e) {
+            } catch (Exception e) {
                 throw new RuntimeException(e);
             }
         }
