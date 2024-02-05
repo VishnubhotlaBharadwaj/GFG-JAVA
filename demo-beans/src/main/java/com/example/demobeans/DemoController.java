@@ -8,12 +8,15 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
-public class SampleController {
+public class DemoController {
 
-    private Logger logger = LoggerFactory.getLogger(SampleController.class);
+    private Logger logger = LoggerFactory.getLogger(DemoController.class);
 
     @Autowired
     DemoConfig demoConfig; // field dependency injection
+
+    @Autowired
+    DemoService demoService;
 
     @GetMapping("/test")
     public String sayHello(){

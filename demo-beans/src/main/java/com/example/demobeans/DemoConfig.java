@@ -17,4 +17,9 @@ public class DemoConfig {
         return restTemplate;
     }
 
+    @Bean
+    public DemoService getDemoService() {
+        return new DemoService();
+    }
+
 }
