@@ -13,11 +13,11 @@ public class SampleController {
     private Logger logger = LoggerFactory.getLogger(SampleController.class);
 
     @Autowired
-    DemoConfig demoConfig;
+    DemoConfig demoConfig; // field dependency injection
 
     @GetMapping("/test")
     public String sayHello(){
-        RestTemplate restTemplate = demoConfig.getTemplate();
+        RestTemplate restTemplate = demoConfig.getTemplate(); // No null pointer exception
         this.logger.info("Inside getTemplate, obj = {}", restTemplate);
         return "Hello World!!";
     }
