@@ -12,11 +12,11 @@ public class DemoConfig {
 
     private Logger logger = LoggerFactory.getLogger(DemoConfig.class);
     @Bean
-    @Scope("prototype")
+    //@Scope("prototype")
     public RestTemplate getTemplate() {
         RestTemplate restTemplate = new RestTemplate();
         logger.info("Inside getTemplate: obj = {}", restTemplate);
-        return restTemplate;
+        return restTemplate; 
     }
 
     @Bean
