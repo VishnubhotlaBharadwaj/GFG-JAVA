@@ -1,6 +1,7 @@
 package com.example.demoapis;
 
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 public class EmployeeController {
 
@@ -9,7 +10,7 @@ public class EmployeeController {
      */
 
     @PostMapping(" ")
-    public void createEmployee() {
+    public void createEmployee(@RequestBody) {
 
     }
 }

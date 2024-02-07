@@ -1,21 +1,10 @@
 package com.example.demoapis;
 
-public class Employee {
-    private String id;
+public class CreateEmployeeRequest {
     private String name;
     private int age;
     private Department department;
     private Address address;
-    private Long createOn;
-    private Long updatedOn;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -47,9 +36,5 @@ public class Employee {
 
     public void setAddress(Address address) {
         this.address = address;
-    }
-
-    public Employee() {
-
     }
 }
