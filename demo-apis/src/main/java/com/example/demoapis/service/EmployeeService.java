@@ -4,9 +4,11 @@ import com.example.demoapis.repository.EmployeeRepository;
 import com.example.demoapis.dto.CreateEmployeeRequest;
 import com.example.demoapis.models.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class EmployeeService {
 
     @Autowired
