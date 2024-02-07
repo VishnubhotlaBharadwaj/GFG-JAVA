@@ -1,5 +1,7 @@
 package com.example.demoapis;
 
+import java.util.UUID;
+
 public class CreateEmployeeRequest {
     private String name;
     private int age;
@@ -36,5 +38,19 @@ public class CreateEmployeeRequest {
 
     public void setAddress(Address address) {
         this.address = address;
+    }
+
+    // conversion from Dto -> Model
+    public Employee to() {
+        Employee employee = new Employee();
+        employee.setName(this.name);
+        employee.setAge(this.age);
+        employee.setAddress(this.address);
+        employee.setDepartment(this.department);
+        employee.setCreateOn(System.currentTimeMillis());
+        employee.setUpdatedOn(System.currentTimeMillis());
+        employee.setId(UUID.randomUUID().toString());
+
+        return employee;
     }
 }

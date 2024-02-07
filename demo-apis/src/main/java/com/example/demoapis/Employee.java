@@ -49,6 +49,22 @@ public class Employee {
         this.address = address;
     }
 
+    public Long getCreateOn() {
+        return createOn;
+    }
+
+    public void setCreateOn(Long createOn) {
+        this.createOn = createOn;
+    }
+
+    public Long getUpdatedOn() {
+        return updatedOn;
+    }
+
+    public void setUpdatedOn(Long updatedOn) {
+        this.updatedOn = updatedOn;
+    }
+
     public Employee() {
 
     }
