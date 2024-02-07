@@ -32,4 +32,8 @@ public class EmployeeService {
         Employee employee = request.to(employeeId);
         return employeeRepository.update(employee);
     }
+
+    public Employee delete(String employeeId) {
+        return employeeRepository.delete(employeeId);
+    }
 }

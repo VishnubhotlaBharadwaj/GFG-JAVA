@@ -29,8 +29,19 @@ public class EmployeeRepository {
     public Employee update(Employee employee) {
         Employee existingEmployee = employeeHashMap.get(employee.getId());
         if(existingEmployee != null) {
+            //Here we need to merge existing as well as the old data.
+            employee = merge(existingEmployee, employee);
             employeeHashMap.put(employee.getId(), employee);
         }
         return employee;
+    }
+
+    private Employee merge(Employee oldData, Employee newData) {
+        newData.setCreateOn(oldData.getCreateOn());
+        return newData;
+    }
+
+    public Employee delete(String employeeId) {
+        return employeeHashMap.remove(employeeId);
     }
 }

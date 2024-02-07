@@ -35,4 +35,9 @@ public class EmployeeController {
                                    @RequestBody UpdateEmpolyeeRequest request) {
         return employeeService.update(employeeId, request);
     }
+
+    @DeleteMapping("/employee")
+    public Employee deleteEmployee(@RequestParam("id")String employeeId) {
+        return employeeService.delete(employeeId);
+    }
 }
