@@ -4,9 +4,9 @@ import com.example.demoapis.dto.CreateEmployeeRequest;
 import com.example.demoapis.models.Employee;
 import com.example.demoapis.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class EmployeeController {
@@ -14,8 +14,18 @@ public class EmployeeController {
    @Autowired
    EmployeeService employeeService;
 
-    @PostMapping(" ")
+    @PostMapping("/employee")
     public Employee createEmployee(@RequestBody CreateEmployeeRequest request) {
         return employeeService.create(request);
+    }
+
+    @GetMapping("/employee/{employeeId}")
+    public Employee getEmployee(@PathVariable("employeeId") String id) {
+        return employeeService.get(id);
+    }
+
+    @GetMapping("/employee/all")
+    public List<Employee> getEmployees(){
+        
     }
 }

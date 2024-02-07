@@ -10,4 +10,8 @@ public class EmployeeRepository {
     public Employee create(Employee employee) {
         return employeeHashMap.put(employee.getId(), employee);
     }
+
+    public Employee get(String id) {
+        return employeeHashMap.get(id);
+    }
 }

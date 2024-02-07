@@ -11,4 +11,8 @@ public class EmployeeService {
         Employee employee = createEmployeeRequest.to();
         return employeeRepository.create(employee);
     }
+
+    public Employee get(String id) {
+        return employeeRepository.get(id);
+    }
 }
