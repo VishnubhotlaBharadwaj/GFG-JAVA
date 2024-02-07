@@ -1,5 +1,6 @@
 package com.example.demoapis.service;
 
+import com.example.demoapis.dto.UpdateEmpolyeeRequest;
 import com.example.demoapis.repository.EmployeeRepository;
 import com.example.demoapis.dto.CreateEmployeeRequest;
 import com.example.demoapis.models.Employee;
@@ -25,5 +26,10 @@ public class EmployeeService {
 
     public List<Employee> get() {
         return employeeRepository.get();
+    }
+
+    public Employee update(String employeeId, UpdateEmpolyeeRequest request) {
+        Employee employee = request.to(employeeId);
+        return employeeRepository.update(employee);
     }
 }

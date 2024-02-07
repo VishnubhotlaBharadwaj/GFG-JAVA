@@ -12,7 +12,8 @@ public class EmployeeRepository {
 
     private HashMap<String, Employee> employeeHashMap = new HashMap<>();
     public Employee create(Employee employee) {
-        return employeeHashMap.put(employee.getId(), employee);
+        employeeHashMap.put(employee.getId(), employee);
+        return employee;
     }
 
     public Employee get(String id) {
@@ -23,5 +24,13 @@ public class EmployeeRepository {
         return employeeHashMap.values().
                 stream().
                 collect(Collectors.toList());
+    }
+
+    public Employee update(Employee employee) {
+        Employee existingEmployee = employeeHashMap.get(employee.getId());
+        if(existingEmployee != null) {
+            employeeHashMap.put(employee.getId(), employee);
+        }
+        return employee;
     }
 }

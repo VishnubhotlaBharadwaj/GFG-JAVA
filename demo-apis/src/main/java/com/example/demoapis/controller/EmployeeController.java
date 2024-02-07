@@ -1,6 +1,7 @@
 package com.example.demoapis.controller;
 
 import com.example.demoapis.dto.CreateEmployeeRequest;
+import com.example.demoapis.dto.UpdateEmpolyeeRequest;
 import com.example.demoapis.models.Employee;
 import com.example.demoapis.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,5 +28,11 @@ public class EmployeeController {
     @GetMapping("/employee/all")
     public List<Employee> getEmployees(){
         return employeeService.get();
+    }
+
+    @PutMapping("/employee/{employeeId}")
+    public Employee updateEmployee(@PathVariable("employeeId") String employeeId,
+                                   @RequestBody UpdateEmpolyeeRequest request) {
+        return employeeService.update(employeeId, request);
     }
 }
