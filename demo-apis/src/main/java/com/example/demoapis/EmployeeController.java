@@ -2,12 +2,14 @@ package com.example.demoapis;
 
 import org.springframework.web.bind.annotation.PostMapping;
 
-public class BookController {
+public class EmployeeController {
 
     /*
      * CRUD APIs
      */
 
     @PostMapping(" ")
-    public void 
+    public void createEmployee() {
+
+    }
 }
