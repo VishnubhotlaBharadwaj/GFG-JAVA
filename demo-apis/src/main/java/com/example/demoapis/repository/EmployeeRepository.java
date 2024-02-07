@@ -3,6 +3,8 @@ package com.example.demoapis.repository;
 import com.example.demoapis.models.Employee;
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class EmployeeRepository {
 
@@ -13,5 +15,11 @@ public class EmployeeRepository {
 
     public Employee get(String id) {
         return employeeHashMap.get(id);
+    }
+
+    public List<Employee> get() {
+        return employeeHashMap.values().
+                stream().
+                collect(Collectors.toList());
     }
 }
