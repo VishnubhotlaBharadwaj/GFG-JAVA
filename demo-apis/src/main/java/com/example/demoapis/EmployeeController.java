@@ -12,7 +12,7 @@ public class EmployeeController {
    EmployeeService employeeService;
 
     @PostMapping(" ")
-    public void createEmployee(@RequestBody CreateEmployeeRequest request) {
-
+    public Employee createEmployee(@RequestBody CreateEmployeeRequest request) {
+        return employeeService.create(request);
     }
 }

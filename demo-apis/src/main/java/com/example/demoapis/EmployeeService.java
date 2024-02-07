@@ -3,7 +3,8 @@ package com.example.demoapis;
 public class EmployeeService {
 
     EmployeeRepository employeeRepository;
-    public void create(CreateEmployeeRequest createEmployeeRequest) {
+    public Employee create(CreateEmployeeRequest createEmployeeRequest) {
         Employee employee = createEmployeeRequest.to();
+        return employeeRepository.create(employee);
     }
 }
