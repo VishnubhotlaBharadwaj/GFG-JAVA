@@ -1,4 +1,6 @@
-package com.example.demoapis;
+package com.example.demoapis.repository;
+
+import com.example.demoapis.models.Employee;
 
 import java.util.HashMap;
 

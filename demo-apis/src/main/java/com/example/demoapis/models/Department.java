@@ -1,4 +1,4 @@
-package com.example.demoapis;
+package com.example.demoapis.models;
 
 public enum Department {
     HR,

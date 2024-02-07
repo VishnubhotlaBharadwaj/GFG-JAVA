@@ -1,4 +1,8 @@
-package com.example.demoapis;
+package com.example.demoapis.dto;
+
+import com.example.demoapis.models.Address;
+import com.example.demoapis.models.Department;
+import com.example.demoapis.models.Employee;
 
 import java.util.UUID;
 
@@ -40,7 +44,7 @@ public class CreateEmployeeRequest {
         this.address = address;
     }
 
-    // conversion from Dto -> Model
+    // conversion from Dto (Data transfer objects) -> Model
     public Employee to() {
         Employee employee = new Employee();
         employee.setName(this.name);

@@ -1,4 +1,7 @@
-package com.example.demoapis;
+package com.example.demoapis.models;
+
+import com.example.demoapis.models.Address;
+import com.example.demoapis.models.Department;
 
 public class Employee {
     private String id;

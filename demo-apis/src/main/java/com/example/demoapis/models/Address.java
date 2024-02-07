@@ -1,4 +1,4 @@
-package com.example.demoapis;
+package com.example.demoapis.models;
 
 public class Address {
     private String houseNo;
