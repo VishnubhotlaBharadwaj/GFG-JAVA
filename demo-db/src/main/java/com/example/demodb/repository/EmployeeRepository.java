@@ -1,14 +1,33 @@
 package com.example.demodb.repository;
 
 import com.example.demodb.models.Employee;
+import lombok.Value;
 import org.springframework.stereotype.Repository;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Repository
 public class EmployeeRepository {
+
+    public Connection connection;
+
+    EmployeeRepository(@Value("${db_url}") String url,
+                       @Value("${db_username}") String username,
+                       @Value("${db_password}") String password) {
+
+
+    }
+
+    public void connectToDB() {
+        this.connection = DriverManager.getConnection();
+    }
+
+
+
 
     private HashMap<String, Employee> employeeHashMap = new HashMap<>();
     public Employee create(Employee employee) {
