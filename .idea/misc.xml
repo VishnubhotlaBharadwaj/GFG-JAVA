@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/Db_Maven/pom.xml" />
         <option value="$PROJECT_DIR$/demo-beans/pom.xml" />
         <option value="$PROJECT_DIR$/demo-apis/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-db/pom.xml" />
       </list>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />
